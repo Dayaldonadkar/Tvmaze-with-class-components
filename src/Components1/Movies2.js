@@ -602,7 +602,7 @@ export default class Movies2 extends Component {
   render() {
     return (
       <div className="flex justify-center">
-        <div className="w-10/11">
+        <div className="md:w-8/12 flex flex-col justify-center items-center">
           <input
             className=" bg-white h-10 w-96 rounded-l-lg"
             type="text"
@@ -610,7 +610,7 @@ export default class Movies2 extends Component {
             value={this.state.value}
             onChange={this.handleChange}
           />
-          <div className="grid grid-cols-5 gap-10">
+          <div className="grid lg:grid-cols-5 lg:gap-10 justify-center space-y-10">
             {this.state.moviesList
               .filter((ite) => {
                 const { show, name } = ite;
@@ -636,7 +636,7 @@ export default class Movies2 extends Component {
                   </div>
                 );
               })}
-          </div>{" "}
+          </div>
         </div>
       </div>
     );
